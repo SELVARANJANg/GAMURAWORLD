@@ -1,0 +1,8 @@
+{
+  "name": "Gamura Hub",
+  "description": "The official project hub for Gamura, founded by Selvaranjan G. A unified showcase of all Gamura ventures.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
