@@ -49,15 +49,11 @@ export default function App() {
       </AnimatePresence>
 
       <div className="relative w-full max-w-lg aspect-[10/16] bg-white">
-        {/* The Hub Image */}
+        {/* The Hub Image - Direct URL for Production Reliability */}
         <img 
-          src="LIST.png" 
+          src="https://lh3.googleusercontent.com/d/1l31M_u6l_WlFWiaxMrhu8tWdI-mU1awd" 
           alt="Gamura Project Hub"
           className="w-full h-full object-contain pointer-events-none"
-          onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            target.src = "https://lh3.googleusercontent.com/d/1l31M_u6l_WlFWiaxMrhu8tWdI-mU1awd";
-          }}
         />
 
         {/* 1. Large Central Logo */}
