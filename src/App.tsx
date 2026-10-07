@@ -49,34 +49,36 @@ export default function App() {
       </AnimatePresence>
 
       <div className="relative w-full max-w-lg aspect-[10/16] bg-white">
-        {/* The Hub Image - Direct URL for Production Reliability */}
-        <img 
-          src="https://lh3.googleusercontent.com/d/1l31M_u6l_WlFWiaxMrhu8tWdI-mU1awd" 
-          alt="Gamura Project Hub"
-          className="w-full h-full object-contain pointer-events-none"
-        />
+        {/* The Hub Image Container */}
+        <div className="relative h-full">
+          <img 
+            src="https://lh3.googleusercontent.com/d/1l31M_u6l_WlFWiaxMrhu8tWdI-mU1awd" 
+            alt="Gamura Project Hub"
+            className="w-full h-full object-contain pointer-events-none"
+          />
 
-        {/* 1. Large Central Logo */}
-        <button 
-          onClick={() => handleAction(logos[0].action)}
-          className="absolute top-[22.5%] left-[34%] w-[32%] h-[17.5%] rounded-2xl hover:bg-black/[0.03] active:scale-95 transition-all cursor-pointer z-10"
-          title={logos[0].label}
-        />
+          {/* 1. Large Central Logo */}
+          <button 
+            onClick={() => handleAction(logos[0].action)}
+            className="absolute top-[22.5%] left-[34%] w-[32%] h-[17.5%] rounded-2xl hover:bg-black/[0.03] active:scale-95 transition-all cursor-pointer z-10"
+            title={logos[0].label}
+          />
 
-        {/* 3x3 Grid of Logos (Logos 2-10) */}
-        <div className="absolute top-[42%] left-[0.5%] w-[99%] h-[55.5%] grid grid-cols-3 gap-1 p-1">
-          {logos.slice(1).map((logo) => (
-            <button
-              key={logo.id}
-              onClick={() => handleAction(logo.action)}
-              className="w-full h-full rounded-2xl hover:bg-black/[0.03] active:scale-95 transition-all cursor-pointer z-10"
-              title={logo.label}
-            />
-          ))}
+          {/* 3x3 Grid of Logos (Logos 2-10) */}
+          <div className="absolute top-[42%] left-[0.5%] w-[99%] h-[55.5%] grid grid-cols-3 gap-1 p-1">
+            {logos.slice(1).map((logo) => (
+              <button
+                key={logo.id}
+                onClick={() => handleAction(logo.action)}
+                className="w-full h-full rounded-2xl hover:bg-black/[0.03] active:scale-95 transition-all cursor-pointer z-10"
+                title={logo.label}
+              />
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* Footer link to founder for detail reference as requested */}
+      {/* Footer link to founder */}
       <div className="absolute bottom-6 text-[10px] text-slate-300 font-medium tracking-widest uppercase">
         <a href="https://selvaranjan.vercel.app/" target="_blank" rel="noopener noreferrer" className="hover:text-slate-500 transition-colors">
           Founder: Selvaranjan G
